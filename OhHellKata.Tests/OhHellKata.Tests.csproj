@@ -42,9 +42,10 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DealerShould.cs" />
     <Compile Include="OhHellFeatures.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitTests\DealerShould.cs" />
+    <Compile Include="UnitTests\PlayerShould.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

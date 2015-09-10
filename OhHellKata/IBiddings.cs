@@ -3,5 +3,6 @@
     public interface IBiddings
     {
         int BidOf(IPlayer player);
+        void SetBid(IPlayer player, int bid);
     }
 }
