@@ -16,11 +16,6 @@ namespace OhHellKata
             _Deck = deck;
         }
 
-        public Round NextRoundWith(Suit trumpCard, Mock<BidPaper> bidCollector)
-        {
-            throw new NotImplementedException();
-        }
-
         public void NextRound()
         {
             _Dealer.Deal(_Deck).To(_Players);
