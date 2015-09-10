@@ -1,22 +1,31 @@
-using System;
+using OhHellKata.Cards;
 
 namespace OhHellKata
 {
     public class Dealer
     {
-        public Dealer Deal(Deck deck)
+        private IDeck _Deck;
+
+        public Dealer Deal(IDeck deck)
         {
-            throw new NotImplementedException();
+            var dealer = new Dealer
+            {
+                _Deck = deck
+            };
+            return dealer;
         }
 
         public void To(FourPlayers players)
         {
-            throw new NotImplementedException();
+            players.Player1.Hand().Add(_Deck.NextCard());
+            players.Player2.Hand().Add(_Deck.NextCard());
+            players.Player3.Hand().Add(_Deck.NextCard());
+            players.Player4.Hand().Add(_Deck.NextCard());
         }
 
-        public Suit PickTrumpFrom(Deck deck)
+        public Suit PickTrumpFrom(IDeck deck)
         {
-            throw new NotImplementedException();
+            return deck.NextCard().Suit;
         }
     }
 }

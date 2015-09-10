@@ -1,12 +1,16 @@
-using System;
+using System.Collections.Generic;
+using OhHellKata.Cards;
 
 namespace OhHellKata
 {
-    public class Deck
+    public class Deck : IDeck
     {
-        public Card NextCard()
+        private Stack<ICard> _Cards;
+
+        public ICard NextCard()
         {
-            throw new NotImplementedException();
+            return _Cards.Peek();
         }
+
     }
 }

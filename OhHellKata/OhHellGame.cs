@@ -1,18 +1,16 @@
-using System;
-
 namespace OhHellKata
 {
     public class OhHellGame
     {
         private readonly FourPlayers _Players;
-        private readonly BidPaper _BidPaper;
-        private readonly Deck _Deck;
-        private Dealer _Dealer = new Dealer();
+        private readonly IBiddings _Biddings;
+        private readonly IDeck _Deck;
+        private readonly Dealer _Dealer = new Dealer();
 
-        public OhHellGame(FourPlayers players, BidPaper bidPaper, Deck deck)
+        public OhHellGame(FourPlayers players, IBiddings biddings, IDeck deck)
         {
             _Players = players;
-            _BidPaper = bidPaper;
+            _Biddings = biddings;
             _Deck = deck;
         }
 
@@ -22,10 +20,10 @@ namespace OhHellKata
 
             var trump = _Dealer.PickTrumpFrom(_Deck);
 
-            _Players.Player1().BidsTo(_BidPaper);
-            _Players.Player2().BidsTo(_BidPaper);
-            _Players.Player3().BidsTo(_BidPaper);
-            _Players.Player4().BidsTo(_BidPaper);
+            _Players.Player1.BidsTo(_Biddings);
+            _Players.Player2.BidsTo(_Biddings);
+            _Players.Player3.BidsTo(_Biddings);
+            _Players.Player4.BidsTo(_Biddings);
 
         }
     }

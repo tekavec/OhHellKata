@@ -4,24 +4,29 @@ namespace OhHellKata
 {
     public class FourPlayers
     {
-        public Player Player1()
+        private readonly IPlayer _Player1= new Player();
+        private readonly IPlayer _Player2= new Player();
+        private readonly IPlayer _Player3= new Player();
+        private readonly IPlayer _Player4= new Player();
+
+        public IPlayer Player1
         {
-            throw new NotImplementedException();
+            get { return _Player1; }
         }
 
-        public Player Player2()
+        public IPlayer Player2
         {
-            throw new NotImplementedException();
+            get { return _Player2; }
         }
 
-        public Player Player3()
+        public IPlayer Player3
         {
-            throw new NotImplementedException();
+            get { return _Player3; }
         }
 
-        public Player Player4()
+        public IPlayer Player4
         {
-            throw new NotImplementedException();
+            get { return _Player4; }
         }
     }
 }

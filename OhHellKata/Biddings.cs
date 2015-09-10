@@ -1,10 +1,10 @@
-using System;
+﻿using System;
 
 namespace OhHellKata
 {
-    public class Queen : Card
+    public class Biddings : IBiddings
     {
-        public static Queen Of(Suit suit)
+        public int BidOf(IPlayer player)
         {
             throw new NotImplementedException();
         }

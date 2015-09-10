@@ -1,4 +1,4 @@
-namespace OhHellKata
+namespace OhHellKata.Cards
 {
     public enum Suit
     {
