@@ -28,7 +28,6 @@ namespace OhHellKata
 
         public void DetermineHighestCard()
         {
-            //calculate the highest card
             var cards = _Players.Select(a => a.Hand().Last()).ToList();
             var cardCalculator = new CardCalculator(_Trump, cards);
             _HighestCard = cardCalculator.HighestCard();
@@ -36,11 +35,37 @@ namespace OhHellKata
 
         public void SetScoresToPlayers()
         {
-            //determine which player has the highest card
             var playerWithHighestCard = _Players.FirstOrDefault(a => a.Hand().Last().Equals(_HighestCard));
             //set score to each player
-
+            if (playerWithHighestCard != null)
+            {
+                playerWithHighestCard.Score = 1;
+            }
+            foreach (var player in _Players)
+            {
+                if (player.Equals(playerWithHighestCard))
+                {
+                    if (_Biddings.BidOf(player) == 1)
+                    {
+                        player.Score += 5;
+                    }
+                    else
+                    {
+                        player.Score -= 5;
+                    }
+                }
+                else
+                {
+                    if (_Biddings.BidOf(player) == 0)
+                    {
+                        player.Score += 5;
+                    }
+                    else
+                    {
+                        player.Score -= 5;
+                    }
+                }
+            }
         }
-
     }
 }

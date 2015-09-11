@@ -14,7 +14,6 @@ namespace OhHellKata.Tests
             var biddings = new Mock<IBiddings>();    
             var players = new FourPlayers();
             var deck = new Mock<IDeck>();
-            var game = new OhHellGame(players, biddings.Object, deck.Object);
 
             MockDeckForPlayers(deck, new List<ICard> {Six.Of(Suit.Spades), Two.Of(Suit.Diamonds), Six.Of(Suit.Clubs), King.Of(Suit.Spades)});
             MockTrumpCard(deck, Queen.Of(Suit.Clubs));
@@ -22,6 +21,8 @@ namespace OhHellKata.Tests
             biddings.Setup(a => a.BidOf(players.Player2)).Returns(0);
             biddings.Setup(a => a.BidOf(players.Player3)).Returns(1);
             biddings.Setup(a => a.BidOf(players.Player4)).Returns(1);
+
+            var game = new OhHellGame(players, biddings.Object, deck.Object);
 
             game.NextRound();
 
