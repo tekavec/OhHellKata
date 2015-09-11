@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="OhHellFeatures.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitTests\CardCalculatorShould.cs" />
     <Compile Include="UnitTests\DealerShould.cs" />
     <Compile Include="UnitTests\PlayerShould.cs" />
     <Compile Include="UnitTests\RoundShould.cs" />

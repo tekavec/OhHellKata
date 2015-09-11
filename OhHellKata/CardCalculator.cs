@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using OhHellKata.Cards;
 
 namespace OhHellKata
@@ -16,7 +18,19 @@ namespace OhHellKata
 
         public ICard HighestCard()
         {
-            throw new System.NotImplementedException();
+            ICard card = null;
+            ICard highestTrumpCard =
+                _Cards.Where(a => a.Suit == _Trump).Aggregate(card,
+                    (curMin, x) =>
+                        (x.Rank  > curMin.Rank ? x : curMin));
+            if (highestTrumpCard != null)
+            {
+                return highestTrumpCard;
+            }
+            var firstSuit = _Cards[0].Suit;
+            return _Cards.Where(a => a.Suit == firstSuit).Aggregate(
+                    (curMin, x) =>
+                        (x.Rank > curMin.Rank ? x : curMin));
         }
     }
 }
