@@ -11,6 +11,6 @@ When every player has made a bid, the player to the left of the dealer makes the
 
 Different variants of scoring are described here: https://en.wikipedia.org/wiki/Oh_Hell#Scoring
 
-<b>The OhHellKata is a simplified version of the h Hell game.</b>
+<b>The OhHellKata is a simplified version of the Oh Hell game.</b>
 It is played with 4 players, each given 1 card. 
 Each player scores 1 point for each trick he/she takes however a player that wins the exact number of tricks bid receives an additional 5 points for making the contract. A player who doesn't score exact number of tricks gets negative 5 points.
