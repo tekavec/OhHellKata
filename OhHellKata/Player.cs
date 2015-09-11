@@ -28,15 +28,12 @@ namespace OhHellKata
             biddings.SetBid(this, NextBid());
         }
 
-        public int Score()
-        {
-            throw new NotImplementedException();
-        }
-
         public IList<ICard> Hand()
         {
             return _Cards;
         }
+
+        public int Score { get; set; }
 
         private int NextBid()
         {

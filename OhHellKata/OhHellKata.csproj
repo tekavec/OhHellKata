@@ -50,9 +50,11 @@
     <Compile Include="Dealer.cs" />
     <Compile Include="Deck.cs" />
     <Compile Include="FourPlayers.cs" />
+    <Compile Include="CardCalculator.cs" />
     <Compile Include="IBiddings.cs" />
     <Compile Include="IBidGenerator.cs" />
     <Compile Include="IDeck.cs" />
+    <Compile Include="IFourPlayers.cs" />
     <Compile Include="IPlayer.cs" />
     <Compile Include="OhHellGame.cs" />
     <Compile Include="Player.cs" />

@@ -25,10 +25,10 @@ namespace OhHellKata.Tests
 
             game.NextRound();
 
-            Assert.That(players.Player1.Score(), Is.EqualTo(5));
-            Assert.That(players.Player1.Score(), Is.EqualTo(5));
-            Assert.That(players.Player1.Score(), Is.EqualTo(6));
-            Assert.That(players.Player1.Score(), Is.EqualTo(-5));
+            Assert.That(game.ScoreOf(players.Player1), Is.EqualTo(5));
+            Assert.That(game.ScoreOf(players.Player2), Is.EqualTo(5));
+            Assert.That(game.ScoreOf(players.Player3), Is.EqualTo(6));
+            Assert.That(game.ScoreOf(players.Player4), Is.EqualTo(-5));
         }
 
         private void MockTrumpCard(Mock<IDeck> deck, ICard card)

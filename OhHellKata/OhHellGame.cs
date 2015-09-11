@@ -1,3 +1,5 @@
+using OhHellKata.Cards;
+
 namespace OhHellKata
 {
     public class OhHellGame
@@ -6,6 +8,7 @@ namespace OhHellKata
         private readonly IBiddings _Biddings;
         private readonly IDeck _Deck;
         private readonly Dealer _Dealer = new Dealer();
+        private Suit _Trump;
 
         public OhHellGame(FourPlayers players, IBiddings biddings, IDeck deck)
         {
@@ -17,14 +20,16 @@ namespace OhHellKata
         public void NextRound()
         {
             _Dealer.Deal(_Deck).To(_Players);
+            _Trump = _Dealer.PickTrumpFrom(_Deck);
+            var round = new Round(_Players, _Trump, _Biddings);
+            round.PerformBidding();
+            round.DetermineHighestCard();
+            round.SetScoresToPlayers();
+        }
 
-            var trump = _Dealer.PickTrumpFrom(_Deck);
-
-            _Players.Player1.BidsTo(_Biddings);
-            _Players.Player2.BidsTo(_Biddings);
-            _Players.Player3.BidsTo(_Biddings);
-            _Players.Player4.BidsTo(_Biddings);
-
+        public int ScoreOf(IPlayer player)
+        {
+            return player.Score;
         }
     }
 }

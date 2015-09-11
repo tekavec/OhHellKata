@@ -1,8 +1,6 @@
-using System;
-
 namespace OhHellKata
 {
-    public class FourPlayers
+    public class FourPlayers : IFourPlayers
     {
         private readonly IPlayer _Player1= new Player();
         private readonly IPlayer _Player2= new Player();

@@ -7,7 +7,7 @@ namespace OhHellKata
     {
         void RevealsCardIn(Round round);
         void BidsTo(IBiddings biddings);
-        int Score();
         IList<ICard> Hand();
+        int Score { get; set; }
     }
 }
