@@ -19,7 +19,7 @@ namespace OhHellKata.Tests.UnitTests
                 Two.Of(Suit.Spades),
                 Six.Of(Suit.Spades)
             };
-            var calculator = new CardCalculator(Suit.Spades);
+            var calculator = new HighestCardCalculator(Suit.Spades);
 
             ICard highestCard = calculator.HighestCard(cards);
 
@@ -36,7 +36,7 @@ namespace OhHellKata.Tests.UnitTests
                 Two.Of(Suit.Hearts),
                 Six.Of(Suit.Spades)
             };
-            var calculator = new CardCalculator(Suit.Clubs);
+            var calculator = new HighestCardCalculator(Suit.Clubs);
 
             ICard highestCard = calculator.HighestCard(cards);
 

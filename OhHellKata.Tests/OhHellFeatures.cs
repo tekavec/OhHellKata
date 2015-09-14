@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Moq;
 using NUnit.Framework;
+using OhHellKata.Bids;
 using OhHellKata.Cards;
 using OhHellKata.Players;
 

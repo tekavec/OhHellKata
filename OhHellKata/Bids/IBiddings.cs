@@ -1,6 +1,6 @@
 ﻿using OhHellKata.Players;
 
-namespace OhHellKata
+namespace OhHellKata.Bids
 {
     public interface IBiddings
     {

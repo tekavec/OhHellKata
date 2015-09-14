@@ -1,5 +1,6 @@
 ﻿using Moq;
 using NUnit.Framework;
+using OhHellKata.Bids;
 using OhHellKata.Players;
 
 namespace OhHellKata.Tests.UnitTests
@@ -19,8 +20,5 @@ namespace OhHellKata.Tests.UnitTests
 
             Assert.That(biddings.BidOf(player), Is.EqualTo(1));
         }
-
-
-
     }
 }

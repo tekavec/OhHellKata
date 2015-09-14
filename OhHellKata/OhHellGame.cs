@@ -1,3 +1,4 @@
+using OhHellKata.Bids;
 using OhHellKata.Cards;
 using OhHellKata.Players;
 using OhHellKata.Rules;
@@ -24,7 +25,7 @@ namespace OhHellKata
         {
             _Dealer.Deal(_Deck).To(_Players);
             _Trump = _Dealer.PickTrumpFrom(_Deck);
-            var round = new Round(_Players, _Biddings, new CardCalculator(_Trump));
+            var round = new Round(_Players, _Biddings, new HighestCardCalculator(_Trump));
             round.PerformBidding();
             round.DetermineHighestCard();
             round.SetScoresToPlayers();

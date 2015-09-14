@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Moq;
 using NUnit.Framework;
+using OhHellKata.Bids;
 using OhHellKata.Cards;
 using OhHellKata.Players;
 using OhHellKata.Rules;
@@ -36,7 +37,7 @@ namespace OhHellKata.Tests.UnitTests
         [Test]
         public void PerformABidding()
         {
-            var round = new Round(_Players.Object, _Biddings, new CardCalculator(Trump));
+            var round = new Round(_Players.Object, _Biddings, new HighestCardCalculator(Trump));
 
             round.PerformBidding();
 

@@ -32,15 +32,12 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Biddings.cs" />
-    <Compile Include="BidGenerator.cs" />
+    <Compile Include="Bids\Biddings.cs" />
+    <Compile Include="Bids\BidGenerator.cs" />
+    <Compile Include="Bids\IBiddings.cs" />
+    <Compile Include="Bids\IBidGenerator.cs" />
     <Compile Include="Cards\ICard.cs" />
     <Compile Include="Cards\King.cs" />
     <Compile Include="Cards\Queen.cs" />
@@ -49,8 +46,6 @@
     <Compile Include="Cards\Two.cs" />
     <Compile Include="Dealer.cs" />
     <Compile Include="Deck.cs" />
-    <Compile Include="IBiddings.cs" />
-    <Compile Include="IBidGenerator.cs" />
     <Compile Include="IDeck.cs" />
     <Compile Include="OhHellGame.cs" />
     <Compile Include="Players\FourPlayers.cs" />
@@ -59,7 +54,7 @@
     <Compile Include="Players\Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Round.cs" />
-    <Compile Include="Rules\CardCalculator.cs" />
+    <Compile Include="Rules\HighestCardCalculator.cs" />
     <Compile Include="Rules\ICardCalculator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

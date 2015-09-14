@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using OhHellKata.Bids;
 using OhHellKata.Cards;
 
 namespace OhHellKata.Players
@@ -16,11 +17,6 @@ namespace OhHellKata.Players
         public Player(IBidGenerator bidGenerator)
         {
             _BidGenerator = bidGenerator;
-        }
-
-        public void RevealsCardIn(Round round)
-        {
-            throw new NotImplementedException();
         }
 
         public void BidsTo(IBiddings biddings)

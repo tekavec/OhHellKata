@@ -5,7 +5,7 @@ namespace OhHellKata
 {
     public class Deck : IDeck
     {
-        private Stack<ICard> _Cards = new Stack<ICard>();
+        private readonly Stack<ICard> _Cards = new Stack<ICard>();
 
         public Stack<ICard> Cards
         {

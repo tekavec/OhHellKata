@@ -4,17 +4,18 @@ using OhHellKata.Cards;
 
 namespace OhHellKata.Rules
 {
-    public class CardCalculator : ICardCalculator
+    public class HighestCardCalculator : ICardCalculator
     {
         private readonly Suit _Trump;
 
-        public CardCalculator(Suit trump)
+        public HighestCardCalculator(Suit trump)
         {
             _Trump = trump;
         }
 
         public ICard HighestCard(IList<ICard> cards)
         {
+            //TODO use aggregates instead:
             //ICard highestTrumpCard =
             //    _Cards.Where(a => a.Suit == _Trump).Aggregate(card,
             //        (curMin, x) =>

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace OhHellKata
+namespace OhHellKata.Bids
 {
     public class BidGenerator : IBidGenerator
     {

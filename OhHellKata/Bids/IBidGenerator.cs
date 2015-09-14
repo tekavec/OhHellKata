@@ -1,4 +1,4 @@
-﻿namespace OhHellKata
+﻿namespace OhHellKata.Bids
 {
     public interface IBidGenerator
     {

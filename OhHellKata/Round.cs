@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using OhHellKata.Bids;
 using OhHellKata.Cards;
 using OhHellKata.Players;
 using OhHellKata.Rules;

@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using OhHellKata.Players;
 
-namespace OhHellKata
+namespace OhHellKata.Bids
 {
     public class Biddings : IBiddings
     {
