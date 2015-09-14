@@ -1,4 +1,4 @@
-namespace OhHellKata
+namespace OhHellKata.Players
 {
     public class FourPlayers : IFourPlayers
     {

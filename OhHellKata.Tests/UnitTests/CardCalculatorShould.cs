@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using NUnit.Framework;
 using OhHellKata.Cards;
+using OhHellKata.Rules;
 
 namespace OhHellKata.Tests.UnitTests
 {
@@ -18,9 +19,9 @@ namespace OhHellKata.Tests.UnitTests
                 Two.Of(Suit.Spades),
                 Six.Of(Suit.Spades)
             };
-            var calculator = new CardCalculator(Suit.Spades, cards);
+            var calculator = new CardCalculator(Suit.Spades);
 
-            ICard highestCard = calculator.HighestCard();
+            ICard highestCard = calculator.HighestCard(cards);
 
             Assert.That(highestCard, Is.EqualTo(Six.Of(Suit.Spades)));
         }
@@ -35,9 +36,9 @@ namespace OhHellKata.Tests.UnitTests
                 Two.Of(Suit.Hearts),
                 Six.Of(Suit.Spades)
             };
-            var calculator = new CardCalculator(Suit.Clubs, cards);
+            var calculator = new CardCalculator(Suit.Clubs);
 
-            ICard highestCard = calculator.HighestCard();
+            ICard highestCard = calculator.HighestCard(cards);
 
             Assert.That(highestCard, Is.EqualTo(Queen.Of(Suit.Hearts)));
         }

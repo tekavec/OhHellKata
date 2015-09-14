@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using OhHellKata.Cards;
 
-namespace OhHellKata
+namespace OhHellKata.Players
 {
     public class Player : IPlayer
     {

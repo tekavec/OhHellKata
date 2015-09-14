@@ -5,11 +5,16 @@ namespace OhHellKata
 {
     public class Deck : IDeck
     {
-        private Stack<ICard> _Cards;
+        private Stack<ICard> _Cards = new Stack<ICard>();
+
+        public Stack<ICard> Cards
+        {
+            get { return _Cards; }
+        }
 
         public ICard NextCard()
         {
-            return _Cards.Peek();
+            return _Cards.Pop();
         }
 
     }

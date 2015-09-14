@@ -1,4 +1,5 @@
 using OhHellKata.Cards;
+using OhHellKata.Players;
 
 namespace OhHellKata
 {
@@ -8,11 +9,8 @@ namespace OhHellKata
 
         public Dealer Deal(IDeck deck)
         {
-            var dealer = new Dealer
-            {
-                _Deck = deck
-            };
-            return dealer;
+            _Deck = deck;
+            return this;
         }
 
         public void To(FourPlayers players)

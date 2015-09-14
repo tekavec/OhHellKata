@@ -1,4 +1,6 @@
-﻿namespace OhHellKata
+﻿using OhHellKata.Players;
+
+namespace OhHellKata
 {
     public interface IBiddings
     {

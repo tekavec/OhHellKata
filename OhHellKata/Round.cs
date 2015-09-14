@@ -1,20 +1,25 @@
 using System.Collections.Generic;
 using System.Linq;
 using OhHellKata.Cards;
+using OhHellKata.Players;
+using OhHellKata.Rules;
 
 namespace OhHellKata
 {
     public class Round
     {
         private readonly IList<IPlayer> _Players;
-        private readonly Suit _Trump;
         private readonly IBiddings _Biddings;
         private ICard _HighestCard;
+        private readonly ICardCalculator _CardCalculator;
 
-        public Round(IFourPlayers players, Suit trump, IBiddings biddings)
+        public Round(
+            IFourPlayers players, 
+            IBiddings biddings, 
+            ICardCalculator cardCalculator)
         {
             _Players = new List<IPlayer>{players.Player1, players.Player2, players.Player3, players.Player4};
-            _Trump = trump;
+            _CardCalculator = cardCalculator;
             _Biddings = biddings;
         }
 
@@ -29,8 +34,7 @@ namespace OhHellKata
         public void DetermineHighestCard()
         {
             var cards = _Players.Select(a => a.Hand().Last()).ToList();
-            var cardCalculator = new CardCalculator(_Trump, cards);
-            _HighestCard = cardCalculator.HighestCard();
+            _HighestCard = _CardCalculator.HighestCard(cards);
         }
 
         public void SetScoresToPlayers()

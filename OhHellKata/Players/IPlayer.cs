@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using OhHellKata.Cards;
 
-namespace OhHellKata
+namespace OhHellKata.Players
 {
     public interface IPlayer
     {

@@ -1,5 +1,6 @@
 ﻿using Moq;
 using NUnit.Framework;
+using OhHellKata.Players;
 
 namespace OhHellKata.Tests.UnitTests
 {
